@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/e495f02f3a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Bootstrap Example 01</title>
+  </head>
+  <body>
+    <header
+      x-data="{ navShow : false }"
+      @scroll.window=" navShow = window.scrollY > 70 ? true : false"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top"
+        :class=" {'header-scrolled' : navShow}"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">Bootstrap Example</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://onlinemag24.com/">My Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  My Works
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://github.com/Kianoosh-Moloodi/Sass-Example-Page"
+                      >Sass Ex 01</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://github.com/Kianoosh-Moloodi/Bootstrap-ep1"
+                      >Bs Ex 01</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="intro d-flex align-items-center banner">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h1 data-aos="fade-up">
+              <i class="fa-brands fa-bootstrap"></i> v5.2 Example 02
+            </h1>
+            <p data-aos="fade-up" class="fs-5 my-3">
+              In this project, you can simply look at the code written by me and
+              realize how easy it will be to design a responsive website using
+              Bootstrap. If this project can be useful for you, I will be happy
+              to rate my abilities on LinkedIn.
+            </p>
+            <a
+              data-aos="fade-in"
+              data-aos-delay="500"
+              class="my-3 fw-bold btn btn-lg btn-primary hover-grow pulse"
+              href="https://www.linkedin.com/in/kianoosh-moloodi/"
+              ><i class="fa-brands fa-linkedin"></i> My Linkedin</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div data-aos="fade-down" class="col-md-7">
+            <h2 class="fw-bold">We Are The Hosting Of The Future</h2>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution.
+            </p>
+            <a
+              class="btn btn-dark hover-grow"
+              href="https://github.com/Kianoosh-Moloodi"
+              ><i class="fa-brands fa-github"></i> My Github</a
+            >
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" class="col-md-5">
+            <img class="img-fluid" src="./img/2.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-3">
+          <div data-aos="fade-up" class="col-12">
+            <h2 class="fw-bold">What Will You Learn</h2>
+            <p>
+              Reliable web hosting with 99.9% availability guarantee and free
+              SSL certificate.
+            </p>
+          </div>
+        </div>
+        <div class="row text-center g-3">
+          <div
+            data-aos="flip-left"
+            data-aos-delay="100"
+            class="col-md-6 col-lg-4"
+          >
+            <div class="card shadow">
+              <img src="./img/3.jpg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-primary fw-bold">
+                  MINIMUM REFERRAL
+                </h5>
+                <p class="card-text">
+                  It doesn’t matter if you received 1 or 20 invitations. You’ll
+                  receive money. and more.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="flip-left"
+            data-aos-delay="200"
+            class="col-md-6 col-lg-4"
+          >
+            <div class="card shadow">
+              <img src="./img/4.jpg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-primary fw-bold">REGULAR BONUSES</h5>
+                <p class="card-text">
+                  Plenty of opportunities for bonuses will keep you moving and
+                  growing Every time.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="flip-left"
+            data-aos-delay="300"
+            class="col-md-6 col-lg-4"
+          >
+            <div class="card shadow">
+              <img src="./img/5.jpg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-primary fw-bold">WEB HOSTING</h5>
+                <p class="card-text">
+                  Our decades of experience & 2 million customers speak for
+                  themselves.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 icon">
+      <div class="container">
+        <div class="row gy-3">
+          <div data-aos="flip-up" class="col-md-6 col-lg-3">
+            <div
+              class="d-flex align-items-center justify-content-center shadow p-3 rounded"
+            >
+              <i class="fa-brands fa-bootstrap fa-3x me-3 bs"></i>
+              <div>
+                <span
+                  class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="2011"
+                ></span>
+                <p>Bootstrap</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-up" class="col-md-6 col-lg-3">
+            <div
+              class="d-flex align-items-center justify-content-center shadow p-3 rounded"
+            >
+              <i class="fa-brands fa-angular fa-3x me-3 ng"></i>
+              <div>
+                <span
+                  class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="2016"
+                ></span>
+                <p>Angular</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-up" class="col-md-6 col-lg-3">
+            <div
+              class="d-flex align-items-center justify-content-center shadow p-3 rounded"
+            >
+              <i class="fa-brands fa-react fa-3x me-3 rj"></i>
+              <div>
+                <span
+                  class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="2013"
+                ></span>
+                <p>React</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-up" class="col-md-6 col-lg-3">
+            <div
+              class="d-flex align-items-center justify-content-center shadow p-3 rounded"
+            >
+              <i class="fa-brands fa-js fa-3x me-3 js"></i>
+              <div>
+                <span
+                  class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="1995"
+                ></span>
+                <p>Java Script</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 icon">
+      <div class="container">
+        <div data-aos="fade-up" class="row mb-3">
+          <h2 class="fw-bold">I will make you happy</h2>
+          <p>
+            Bring to the table win-win survival strategies to ensure proactive
+            domination.
+          </p>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div data-aos="fade-right" data-aos-delay="300" class="row gy-3">
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-compass-drafting fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>Modern Design</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-gauge-high fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>High Quality</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-mobile fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>Ultra Responsive</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-palette fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>Fully Customizable</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-sliders fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>Premium Slider</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex">
+                  <i class="fa-solid fa-calendar-check fa-3x me-3 fs"></i>
+                  <div>
+                    <h5>Free Updates</h5>
+                    <p class="text-muted">
+                      Imagination is more important than knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="400" class="col-lg-4 my-3">
+            <img class="img-fluid" src="./img/6.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div data-aos="fade-up" class="row mb-3">
+          <h2 class="fw-bold">What People Say About Me</h2>
+          <p>Simple Solution to Complex Questions</p>
+        </div>
+        <div data-aos="flip-up" class="row gy-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="sbox blue">
+              <img
+                src="./img/7.jpg"
+                class="p-2 m-1 bg-light rounded-circle img-fluid"
+              />
+              <h4>Ann Robinson</h4>
+              <p>
+                Capitalize on low hanging fruit to identify a ballpark value
+                added activity to beta test.
+              </p>
+              <a class="bg-light p-2 m-2 rounded" href="#">
+                <span>More</span>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="sbox">
+              <img
+                src="./img/9.jpg"
+                class="p-2 m-1 bg-light rounded-circle img-fluid"
+              />
+              <h4>Devin Briggs</h4>
+              <p>
+                Override the digital divide with additional clickthroughs from
+                DevOps.
+              </p>
+              <a class="bg-light p-2 m-2 rounded" href="#">
+                <span>More</span>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="sbox">
+              <img
+                src="./img/8.jpg"
+                class="p-2 m-1 bg-light rounded-circle img-fluid"
+              />
+              <h4>Charlene Bryant</h4>
+              <p>
+                Bring to the table win-win survival strategies to ensure
+                proactive domination.
+              </p>
+              <a class="bg-light p-2 m-2 rounded" href="#">
+                <span>More</span>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricehover py-5">
+      <div class="container">
+        <div data-aos="fade-up" class="row mb-3">
+          <h2 class="fw-bold">Choose The Best Cloud Hosting Plan</h2>
+          <p>
+            Every Cloud Hosting plan comes with a free domain name and SSL
+            certificate.
+          </p>
+        </div>
+        <div class="row text-center gy-3">
+          <div data-aos="flip-left" class="col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <i
+                  class="fa-solid fa-server fa-2x p-3 bg-light rounded img-fluid"
+                ></i>
+                <h4 class="fw-bold my-2">Startup</h4>
+                <p class="fw-bold bg-light rounded">
+                  35$ <span class="text-muted">/mos.</span>
+                </p>
+                <ul class="list-unstyled">
+                  <li>300 Websites</li>
+                  <li class="my-1">200 GB SSD Storage</li>
+                  <li>3 GB RAM</li>
+                  <li class="my-1">2 CPU Cores</li>
+                  <li class="text-muted text-decoration-line-through">
+                    Free Email
+                  </li>
+                  <li class="my-1 text-muted text-decoration-line-through">
+                    Free SSL
+                  </li>
+                  <li class="text-muted text-decoration-line-through">
+                    Free Domain
+                  </li>
+                  <li class="my-1 text-muted text-decoration-line-through">
+                    Cloudflare CDN
+                  </li>
+                  <li class="text-muted text-decoration-line-through">
+                    Daily Backup
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary rounded">
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-right" class="col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <i
+                  class="fa-solid fa-server fa-2x p-3 bg-light rounded img-fluid"
+                ></i>
+                <h4 class="fw-bold my-2">Professional</h4>
+                <p class="fw-bold bg-light rounded">
+                  95$ <span class="text-muted">/mos.</span>
+                </p>
+                <ul class="list-unstyled">
+                  <li>300 Websites</li>
+                  <li class="my-1">200 GB SSD Storage</li>
+                  <li>3 GB RAM</li>
+                  <li class="my-1">2 CPU Cores</li>
+                  <li>Free Email</li>
+                  <li class="my-1">Free SSL</li>
+                  <li class="text-muted text-decoration-line-through">
+                    Free Domain
+                  </li>
+                  <li class="my-1 text-muted text-decoration-line-through">
+                    Cloudflare CDN
+                  </li>
+                  <li class="text-muted text-decoration-line-through">
+                    Daily Backup
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary rounded">
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-left" class="col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <i
+                  class="fa-solid fa-server fa-2x p-3 bg-light rounded img-fluid"
+                ></i>
+                <h4 class="fw-bold my-2">Enterprise</h4>
+                <p class="fw-bold bg-light rounded">
+                  189$ <span class="text-muted">/mos.</span>
+                </p>
+                <ul class="list-unstyled">
+                  <li>300 Websites</li>
+                  <li class="my-1">200 GB SSD Storage</li>
+                  <li>3 GB RAM</li>
+                  <li class="my-1">2 CPU Cores</li>
+                  <li>Free Email</li>
+                  <li class="my-1">Free SSL</li>
+                  <li>Free Domain</li>
+                  <li class="my-1">Cloudflare CDN</li>
+                  <li class="text-muted text-decoration-line-through">
+                    Daily Backup
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary rounded">
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-right" class="col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <i
+                  class="fa-solid fa-server fa-2x p-3 bg-light rounded img-fluid"
+                ></i>
+                <h4 class="fw-bold my-2">High-End</h4>
+                <p class="fw-bold bg-light rounded">
+                  299$ <span class="text-muted">/mos.</span>
+                </p>
+                <ul class="list-unstyled">
+                  <li>300 Websites</li>
+                  <li class="my-1">200 GB SSD Storage</li>
+                  <li>3 GB RAM</li>
+                  <li class="my-1">2 CPU Cores</li>
+                  <li>Free Email</li>
+                  <li class="my-1">Free SSL</li>
+                  <li>Free Domain</li>
+                  <li class="my-1">Cloudflare CDN</li>
+                  <li>Daily Backup</li>
+                </ul>
+                <button class="btn btn-outline-primary rounded">
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact py-5">
+      <div class="container">
+        <div data-aos="fade-up" class="row mb-3">
+          <h2 class="fw-bold">We’re Here 24/7</h2>
+          <p>
+            Our support service will answer any of your questions. You can read
+            FAQ, call or email us
+          </p>
+        </div>
+        <div data-aos="fade-right" data-aos-delay="200" class="row gy-3">
+          <div class="col-lg-5">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="fa-solid fa-phone"></i>
+                  <h5 class="fw-bold">Phone</h5>
+                  <p>+1 856 268422</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="fa-solid fa-envelope"></i>
+                  <h5 class="fw-bold">E-Mail</h5>
+                  <p>info@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <h5 class="fw-bold">Location</h5>
+                  <p>2373 Bagwell Avenue, Ocala</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <h5 class="fw-bold">Hours</h5>
+                  <p>
+                    Mon/Frd <br />
+                    8:00/14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="300" class="col-lg-7">
+            <form action="#" class="contact-f">
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input class="form-control" type="text" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input class="form-control" type="text" />
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Name</label>
+                  <input class="form-control" type="text" />
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Name</label>
+                  <textarea class="form-control" rows="1"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-primary">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer pt-5 bg-light">
+      <div class="container">
+        <div class="row gy-3 justify-content-center">
+          <div class="col-lg-5">
+            <h4>Kianoosh Moloodi</h4>
+            <p>
+              I scrolled millions of miles with my computer mouse to learn more.
+              My mission is now to convey helpful information to those who love
+              learning.
+            </p>
+            <div class="social-link">
+              <a href="https://twitter.com/kia_mld"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/kianoosh-moloodi/"
+                ><i class="mx-2 fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Kianoosh-Moloodi"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 offset-lg-1 col-6">
+            <h5>My Links</h5>
+            <hr />
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.linkedin.com/in/kianoosh-moloodi/"
+                  >Linkedin</a
+                >
+              </li>
+              <li><a href="https://github.com/Kianoosh-Moloodi">Github</a></li>
+              <li><a href="https://onlinemag24.com/">Blog</a></li>
+              <li><a href="https://kmagroute.com/">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5>Examples</h5>
+            <hr />
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/Kianoosh-Moloodi/Sass-Example-Page"
+                  >Sass Page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Kianoosh-Moloodi/CSS-GRID-Example-Page"
+                  >GRID Page</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Kianoosh-Moloodi/Bootstrap-ep1"
+                  >Bootstrap 01</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Kianoosh-Moloodi/Todo-Simple-App"
+                  >JS Simple App</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5>Categories</h5>
+            <hr />
+            <ul class="list-unstyled">
+              <li><a href="#">React JS</a></li>
+              <li><a href="#">Vue Js</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">PHP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-dark py-3 mt-3 text-center">
+        <p class="fs-bold text-light">&copy;2022 Kianoosh Moloodi</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script>
+      new PureCounter();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
